@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: k8s-study-front
+spec:
+  selector:
+    app: nginx
+    project: k8s-study
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
